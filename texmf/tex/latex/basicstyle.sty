@@ -1,0 +1,43 @@
+% Bijan Sondossi
+% basicstyle.sty: Basic formatting, removes some vertical whitespace.
+
+% Package info ---------------------------------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{basicstyle}[2017/03/13 Bijan Sondossi's basic style]
+
+% Dependencies ---------------------------------------------------------
+
+\usepackage{enumitem, etoolbox}
+
+% Custom commands/environments -----------------------------------------
+
+% https://tex.stackexchange.com/questions/98839/
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+% https://tex.stackexchange.com/questions/47400/
+\newcommand{\zerodisplayskips}{%
+  \setlength{\abovedisplayskip}{0pt}%
+  \setlength{\abovedisplayshortskip}{0pt}%
+  \setlength{\belowdisplayskip}{0pt}%
+  \setlength{\belowdisplayshortskip}{0pt}}
+\appto{\normalsize}{\zerodisplayskips}
+\appto{\small}{\zerodisplayskips}
+\appto{\footnotesize}{\zerodisplayskips}
+
+% Variables ------------------------------------------------------------
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.5} % double spacing
+
+\setlist[enumerate]{leftmargin=*, noitemsep, topsep=0pt}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt}
+
+\renewcommand\labelitemi{-}
+\renewcommand\labelitemii{-}
+\renewcommand\labelitemiii{-}
+
+\endinput
