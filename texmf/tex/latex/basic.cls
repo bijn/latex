@@ -9,10 +9,10 @@
 % Dependencies ---------------------------------------------------------
 
 % https://tex.stackexchange.com/questions/267094
-\providecommand\basicfontsize{10pt}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+\providecommand\minfontsize{8pt}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{extreport}}
 \ProcessOptions\relax
-\LoadClass[\basicfontsize]{report}
+\LoadClass[\minfontsize]{extreport}
 
 % My basic style
 \usepackage{basicstyle}
